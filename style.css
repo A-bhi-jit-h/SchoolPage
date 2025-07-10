@@ -1,0 +1,172 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Oswald:wght@500&display=swap');
+
+/* Reset and Base Styling */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: 'EB Garamond', serif;
+  line-height: 1.6;
+  letter-spacing: 0.3px;
+  word-spacing: 1px;
+  color: #000;
+  background-color: #fff;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 20px;
+}
+
+/* Header */
+header {
+  grid-column: 1 / 4;
+  border-top: 4px solid #7a2020;
+  border-bottom: 4px solid #7a2020;
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 3.6rem;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.4rem;
+  letter-spacing: 1px;
+  margin: 20px 0 10px;
+}
+
+/* Main content */
+section {
+  grid-column: 1 / 2;
+}
+
+section p {
+  font-size: 1.6rem;
+  margin-bottom: 1em;
+}
+
+/* Indent first paragraph after headings */
+section h2 + p {
+  text-indent: 20px;
+}
+
+/* Lists in section */
+section ul,
+section ol {
+  margin: 1em 0;
+  padding-left: 2em;
+}
+
+section li {
+  font-size: 1.6rem;
+  margin-bottom: 0.5em;
+  line-height: 1.6;
+  list-style-type: square;
+}
+
+/* Links */
+a {
+  text-decoration: underline;
+  color: #900C3F;
+  outline: none;
+}
+
+a:visited {
+  color: #6c0a2e;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: #C70039;
+}
+
+a:active {
+  background-color: #ffdce0;
+  color: #000;
+}
+
+/* External link icon */
+a[href^="http"]:not([href*="huxley"]):after {
+  content: " 🔗";
+  font-size: 0.8em;
+  margin-left: 3px;
+}
+
+/* Aside: Top Course Choices */
+aside {
+  grid-column: 2 / 3;
+}
+
+aside ul {
+  list-style-type: square;
+  padding-left: 1.5em;
+  margin-top: 10px;
+}
+
+aside li {
+  font-size: 1.6rem;
+  margin-bottom: 0.5em;
+}
+
+/* Sidebar nav menu */
+nav {
+  grid-column: 3 / 4;
+  min-width: 150px;
+}
+
+nav ul {
+  list-style: none; /* ✅ Remove bullets */
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav ul li {
+  margin-bottom: 10px;
+}
+
+nav ul li a {
+  display: block;
+  padding: 12px 16px;
+  font-size: 1.6rem;
+  white-space: nowrap; /* ✅ Prevent text wrapping */
+  background-color: #fff;
+  color: #900C3F;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid #900C3F;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  background-color: #fce4ec;
+  color: #C70039;
+  border-color: #C70039;
+}
+
+/* Footer */
+footer {
+  grid-column: 1 / 4;
+  border-top: 4px solid #7a2020;
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 10px;
+  font-size: 1.4rem;
+}
